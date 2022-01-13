@@ -288,7 +288,7 @@ final class Packager implements \JsonSerializable
         // Bin has no fitted items yet
         if (iterator_count($bin->getIterableFittedItems()) === 0) {
             if (!$bin->putItem($item, PositionType::START_POSITION)) {
-                $bin->setUnfittedItems($item);
+                //$bin->setUnfittedItems($item);
             }
 
             return;
@@ -334,9 +334,9 @@ final class Packager implements \JsonSerializable
             }
         }
 
-        if (!$fitted) {
-            $bin->setUnfittedItems($item);
-        }
+//        if (!$fitted) {
+//            $bin->setUnfittedItems($item);
+//        }
     }
 
     /**
